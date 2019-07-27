@@ -34,8 +34,6 @@ const styles = StyleSheet.create({
         borderColor: 'grey',
         width:60,
         height:30,
-        paddingHorizontal: 30,
-        paddingTop: -20
     },
 })
 
@@ -117,6 +115,7 @@ export class DisplayTime extends Component {
 
     handleStart=()=> {
         this.setState(prevState => ({start: !prevState.start, buttonName: (prevState.start ?  defaultButtonName : doosraButtonName)}))
+        console.warn('Reached Here');
     }
 
     handleReset=()=> {
@@ -179,6 +178,7 @@ export class DisplayTime extends Component {
         else {
             text =`0${min}:0${sec}`
         }
+
 
         return (
             <View>
